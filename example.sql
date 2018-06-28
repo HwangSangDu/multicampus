@@ -74,27 +74,28 @@ use sample;
 -- order by average desc ;
 
 
-use sakila;
+-- use sakila;
 
+-- select * from sakila.film_category;
 
-
-
-select * from sakila.film_category;
-
-select category_id, count(category_id) as c_count
-from sakila.film_category group by category_id order by c_count desc;
+-- select category_id, count(category_id) as c_count
+-- from sakila.film_category group by category_id order by c_count desc;
 
  
-
-
- 
-select name, count(name)
-from sample.sample51
--- where count(name)=1
-group by name
-having count(name) = 1;
+-- select name, count(name)
+-- from sample.sample51
+-- -- where count(name)=1
+-- group by name
+-- having count(name) = 1;
 
 --  집계함수 이후 조건문은 having 절이 필요하다.
+
+
+
+
+use sample;
+select * from sample54;
+
 
 
 
