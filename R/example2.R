@@ -1,8 +1,11 @@
 #install.packages('KoNLP', dependencies = T)
+?install.packages
+
+
 # install.packages('rJava')
 # dyn.load('/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/server/libjvm.dylib')
 # Sys.setenv(JAVA_HOME = '/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home')
-# Sys.setlocale("LC_ALL", "ko_KR.UTF-8")
+Sys.setlocale("LC_ALL", "ko_KR.UTF-8")
 
 # require(rJava)
 # .jinit()
@@ -10,9 +13,44 @@
 
 
 # library(rJava)
-# library(KoNLP)
-# KoNLP::extractNoun('아버지가 방에 들어가신다.')
-# KoNLP::SimplePos09('dkqjwldqlkjdjakjhdkajdlk 아버지')
+ library(KoNLP)
+# KoNLP::extractNoun('아버지가 방에 들어가신다.'"
+KoNLP::SimplePos09('dkqjwldqlkjdjakjhdkajdlk 아버지')
+
+??install.packages
+??SimplePos09
+
+??regression
+
+
+# 전부 문자열로 바뀐다.
+c(1,"fgjkghsdjf",2,3,4,5)
+x4[-3]
+x4[c(1,2,3,4)]
+x4[x4%%2 == 0]
+
+
+rep(1:3, each=4 , length.out=10)
+rep(1:3, times=10)
+
+?rep
+
+# <- 의 사용을 추천한다. assignment 시 헷갈리지 않을 수 있다.
+# R은 벡터를 기본 자료형으로 사용한다.
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+
+
+
+
+
+
+
 
 
 # 1
@@ -78,11 +116,11 @@
 # ?sample
 # sample(1:10, ,13,prob=c(1,1,1,1,1,1,1,1,12,3))
 
-# View(iris3)
-# edit(iris3)
-# str(iris)
-# length(x4)
-# x4
+View(iris3)
+edit(iris3)
+str(iris)
+length(x4)
+x4
 
 
 # nrow(iris3)
@@ -174,6 +212,8 @@ cbind() # column unit
 
 
 
+
+
 # 1:5 + 3
 # a1[ , , 2]
 # read
@@ -242,12 +282,16 @@ txt5 = as.data.frame(table(txt4))
 txt5
 wordcloud2(txt5,T,'kaiti')
 
+getwd()
 
 
+colnames(iris)
 
 
-
-
+data1$a
+y3$c
+y3[[3]][5:17]
+y3[[2]][2]
 
 
 
