@@ -38,14 +38,11 @@ dbDisconnect(con)
 install.packages("vcd")
 library(vcd)
 counts<-table(Arthritis$Improved)
-barplot(counts, 
+counts
+barplot(counts,  # x
         main = 'Simple',
         xlab = "imporve",
         ylab = "Frequency")
-
-counts
-
-
 
 
 
@@ -68,6 +65,7 @@ barplot(counts,
 dev.off()
 
 
+Arthritis
 
 plot(Arthritis$Improved,
      main = 'Simple',
@@ -79,6 +77,10 @@ plot(Arthritis$Improved,
 methods("plot")
 counts1 = table(Arthritis$Improved,
       Arthritis$Treatment)
+
+?table # 개수를 센다!!
+counts1
+plot(counts1)
 barplot(counts1,
         xlab = "Treatement",
         ylab = "frequency",
@@ -89,6 +91,7 @@ colors()
 ?barplot
 
 # 스피노 그램
+
 spine(counts1)
 spine(t(counts1))
 
@@ -122,6 +125,11 @@ hist(mtcars$mpg, breaks=12, freq=F)
 lines(density(mtcars$mpg), col = "blue", lwd = 2)
 str(factor(4,5,6))
 
+
+mtcars$mpg
+mtcars$cyl
+
+
 install.packages("sm")
 library(sm)
 attach(mtcars)
@@ -130,12 +138,27 @@ attach(mtcars)
 cyl.f <- factor(cyl, 
                 levels=c(4,6,8),
                 labels = c("4","6","8"))
-
+mtcars$cyl
 sm.density.compare(mtcars$mpg,
                    mtcars$cyl,
                    xlab = "x",
                    ylab="y")
+intsqll 
+library("vioplot")
+?vioplot
 
+d <- density(mtcars$mpg)
+plot(d) # x,y
+d
+
+
+mtcars$cyl
+mtcars
+
+?boxplot
+
+
+rug(mtcars$mpg, col="brown")
 
 # boxplot 
 stat = boxplot(mtcars$mpg~mtcars$cyl, main="car",
@@ -169,6 +192,7 @@ myvar <- c("mpg", "hp", "wt")
 # summary는 중앙값 평균 최솟값 등등 전체적으로 구해준다.
 summary(mtcars[myvar])
 mtcars[myvar]
+
 
 
 
