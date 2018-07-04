@@ -1,28 +1,25 @@
 
 
+Sys.setlocale("LC_ALL", "ko_KR.UTF-8")
 
+# 사분위수 
 
 quantile(mtcars$mpg)
-
-myvars <- c("")
 mtcars
 
 
 
-
-# 베르누이 시행
+# 베르누이 시행 , 이항분포
 
 
 x <- c(0,1,2)
 px <- c(1/4, 1/2, 1/4)
 Ex <- sum(x * px)
 Var <- sum(x^2 * px) - Ex^2
+
 sum(x^2)
 sum(x)
 Var
-
-cat("\014")
-
 
 # 이항 분포
 b <- 6
@@ -31,38 +28,32 @@ p <- 1/3
 n <- 6
 x <- 0:n
 
-
-
 px <- dbinom(x = x,
        size = n,
        prob = p
 )
+plot(x, px, typ='height')
+px
+
 
 ### n이하를 더해준다.
 ### 누적 분포함수
-?qbinom
 ?pbinom
 px <- pbinom(q = x,
              size = n,
              prob = p
 )
 px
+plot(x, px, typ='height')
 
-
-
+?qbinom
 px <- qbinom(p = 0.50,
              size = n,
              prob = p
 )
 px
 
-plot(x, px, typ='height')
-
-
-px
-
-
-
+# random 이항분포
 px <- rbinom(
   n = 10,
   size = 100,
@@ -103,12 +94,10 @@ b4
 plot(b4, xlim = c(0,6000),
      col='red',
      type='l')
-lines(b1, col = 'blue')
-
-
-
 
 ### 정규분포 ###
+
+?dnorm
 mu <- 170 # 평균
 sigma <- 6 # 표준편차
 ll <- mu - 3*sigma
@@ -117,8 +106,6 @@ x <- seq(ll, up, by = 0.01)
 nd <- dnorm(x, mean=mu,
             sd = sigma)
 plot(nd)
-?plot
-?dnorm
 
 
 px <- pnorm(q = 182,
@@ -132,28 +119,23 @@ qnorm(p = .25,
       sd = 5)
 
 ## random extraction
-rx <- rnorm(n = 3000,
+rx <- rnorm(n = 30,
        mean = mu,
-       s = 10000)
-rx <- sort(rx, decreasing = F)
+       s = 100)
+# rx <- sort(rx, decreasing = F)
 plot(rx)
 
-
-
-
-
+# 몇자리 소수점 지정
 options(digits = 13)
+# 난수지정
 set.seed(1234)
 
-
-
-
-
+?qnorm
 qnorm(p = 0.1,
       mean = 0,
       sd = 10)
 
-
+# random 정규분포 추출
 r.n = rnorm(10)
 r.n
 sum_ini <- 0
@@ -165,6 +147,7 @@ for(i in r.n)
 sum_ini
 
 
+# 구구단 출력
 ma <- matrix(1:12 , nrow = 3)
 for (i in 2:9) {
   for (j in 1:9) {
@@ -210,9 +193,10 @@ for(i in 1:1000){
 
 }
 
-
+# 표준편차
 sd(r.1.mean)
 sd(r.2.mean)
+# 평균
 mean(r.1.mean)
 mean(r.2.mean)
 
@@ -250,7 +234,7 @@ y1 <- dnorm(x = x1,
             mean = 170,
             sd=(6/sqrt(4)))
 
-lines(x1, y1, lty = 2, lwd = 2, col = "blue")
+# lines(x1, y1, lty = 2, lwd = 2, col = "blue")
 
 
 
@@ -294,13 +278,6 @@ hist(b.2.mean)
 hist(b.4.mean)
 hist(b.32.mean)
 
-
-
-
-
-
-
-
 cor1 = c(234, 234, 234, 233, 233,
          233, 233, 231, 232, 231)
 
@@ -310,6 +287,8 @@ cor2 = c(146.3, 146.4, 144.1, 146.7,
 
 ## 사용자 정의 함수
 # 모집단에대한 분산
+
+# 함수로 구현!!
 var.p <- function(x,y,z){
   n <- length(x)
   m <- mean(x)
