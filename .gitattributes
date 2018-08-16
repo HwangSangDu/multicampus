@@ -1,0 +1,10 @@
+R filter=lfs diff=lfs merge=lfs -text
+mglearn filter=lfs diff=lfs merge=lfs -text
+face6_dog6_cyclegan filter=lfs diff=lfs merge=lfs -text
+gan_exam filter=lfs diff=lfs merge=lfs -text
+python filter=lfs diff=lfs merge=lfs -text
+python-hand-on filter=lfs diff=lfs merge=lfs -text
+scikit-learn filter=lfs diff=lfs merge=lfs -text
+광현 filter=lfs diff=lfs merge=lfs -text
+README.md filter=lfs diff=lfs merge=lfs -text
+example.sql filter=lfs diff=lfs merge=lfs -text
