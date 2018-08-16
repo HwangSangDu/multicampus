@@ -1,3 +1,6 @@
 [submodule "other"]
 	path = other
 	url = https://github.com/mgh3326/GyeonggiBigDataSpecialist.git
+[submodule "python-hand-on"]
+	path = python-hand-on
+	url = https://github.com/rickiepark/handson-ml.git
