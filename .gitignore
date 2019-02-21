@@ -1,4 +1,7 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
+**/.Rproj.user
+**/.Rhistory
+**/.RData
+**/.Ruserdata
+**/subway.csv
+**/mnist_test.csv
+mnist_train.csv
