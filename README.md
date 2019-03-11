@@ -1,6 +1,7 @@
 ## 경기도컨텐츠진흥원 주관 빅데이터 심화교육
 
-> 기간 2018.06.25 ~ 2018.08.31
+> 기간 2018.06.25 ~ 2018.08.31 <br>
+> 책  : https://github.com/HwangSangDu/multicampus/issues/1
 
 ## Study History
 * 2018/06/25
