@@ -7,7 +7,8 @@
     * 과정 시작
     * mysql 설치
     * workbench 설치
-![](images/SQL_첫걸음.jpg)
+![image](https://user-images.githubusercontent.com/24689883/54098139-90b04e00-43f6-11e9-8ff3-f004479b8f30.png)
+   
 * 2018/06/26
     * mysql 20 강까지
 * 2018/06/27
@@ -25,7 +26,7 @@
     * 누적 막대 그래프
     * 집단 막대 그래프
     * 파이 차트
-![](images/R인_액션.jpg)        
+![image](https://user-images.githubusercontent.com/24689883/54098135-8c843080-43f6-11e9-8a70-62b8471b0771.png)
 * 2018/07/03
     * 이항 분포
     * 누적 분포함수
@@ -74,7 +75,6 @@
     * 두집단차이검정
 * 2018/07/17
     * R 단순회귀분석
-![](images/데이터분석_준전문가.jpg)
 * 2018/07/18
     * R 다중회귀분석
 * 2018/07/19
